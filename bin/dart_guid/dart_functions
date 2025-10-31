@@ -1,0 +1,170 @@
+ Funciones en Dart
+
+
+Las funciones en Dart son bloques de código reutilizables que permiten ejecutar una serie de instrucciones. 
+Pueden aceptar parámetros y devolver un valor. 
+Las funciones son fundamentales para estructurar y organizar el código.
+
+
+Declaración de Funciones
+
+Una función en Dart se declara usando la palabra clave returnType seguida del nombre de la función y un par de paréntesis (). Dentro de los paréntesis se definen los parámetros que la función puede recibir.
+
+
+void saludar() {
+  print('Hola, Mundo!');
+}
+
+saludar();
+
+
+Funciones con Parámetros
+
+Las funciones pueden recibir parámetros que permiten pasar valores desde el exterior:
+
+void saludarA(String nombre) {
+  print('Hola, $nombre!');
+}
+
+
+saludarA('Carlos'); 
+// Resultado: Hola, Carlos!
+
+
+Tipos de Funciones en Dart
+
+ Funciones que devuelven valores
+Estas funciones devuelven un valor de un tipo específico. Utilizan return para devolver un resultado.
+
+
+int sumar(int a, int b) {
+  return a + b;
+}
+
+
+int resultado = sumar(3, 4);
+print(resultado); 
+// Resultado: 7
+
+
+ Funciones Flecha (Arrow Functions)
+Son una forma más concisa de escribir funciones de una sola expresión.
+
+
+int multiplicar(int a, int b) => a * b;
+print(multiplicar(3, 4)); 
+// Resultado: 12
+
+
+ Funciones Anónimas (Lambdas)
+Estas funciones no tienen nombre y se utilizan frecuentemente como parámetros en otras funciones.
+
+
+var lista = ['Manzana', 'Banana', 'Naranja'];
+  lista.forEach((fruta) {
+      print(fruta);
+  });
+
+
+// Resultado: Manzana Banana Naranja
+
+
+ Funciones como Primeras Clases
+
+Las funciones en Dart son consideradas “ciudadanos de primera clase”, lo que significa que pueden asignarse a variables, pasarse como argumentos a otras funciones o incluso devolverse desde funciones. Son una herramienta poderosa para estructurar el código de forma clara y eficiente. Además, Dart ofrece varias maneras de declarar y utilizar funciones, brindando gran flexibilidad en el diseño del código.
+
+
+void ejecutarFuncion(Function funcion) {
+  funcion();
+}
+
+void mostrarMensaje() {
+  print('Mensaje ejecutado');
+}
+
+ejecutarFuncion(mostrarMensaje); 
+// Resultado: Mensaje ejecutado
+
+
+Funciones Anónimas y Arrow Functions
+
+Las funciones anónimas son funciones que no tienen un nombre específico y se utilizan comúnmente para callbacks o como argumentos en otras funciones. Dart también soporta arrow functions, que son una sintaxis más concisa para declarar funciones.
+
+
+ Función anónima
+
+Se define una función anónima que toma dos parámetros enteros a y b, y retorna su suma. Luego, se invoca la función con los valores 3 y 4, mostrando el resultado 7 en la consola.
+
+
+var suma = (int a, int b) {
+  return a + b;
+};
+
+
+print(suma(3, 4)); 
+// Resultado: 7
+
+
+ arrow function
+
+Se utiliza una arrow function para definir la función suma, que toma dos parámetros a y b y retorna su suma de manera concisa. Al invocar suma con 3 y 4, se imprime el resultado 7 en la consola.
+
+
+var suma = (int a, int b) => a + b;
+print(suma(3, 4));
+// Resultado: 7
+
+
+Parámetros Posicionales y con Nombre
+Dart permite dos tipos de parámetros en las funciones: posicionales y con nombre.
+
+
+ Los parámetros posicionales
+Los parámetros posicionales son aquellos que deben ser pasados en el orden en que se definen.
+
+
+ parámetros con nombre
+Son aquellos parámetros que se pueden omitir y se pasan como un mapa de claves y valores.
+
+
+ Ejemplo de parámetros posicionales
+La función mostrarDatos recibe dos parámetros posicionales, nombre y edad, y los imprime en la consola. Al llamar a la función con ‘Juan’ y 30, se muestra el mensaje: Nombre: Juan, Edad: 30.
+
+
+void mostrarDatos(String nombre, int edad) {
+  print('Nombre: $nombre, Edad: $edad');
+}
+
+
+mostrarDatos('Juan', 30);
+ Ejemplo de parámetros con nombre
+La función mostrarDatos utiliza parámetros con nombre (nombre y edad), que deben ser proporcionados al llamarla. 
+Al invocar la función con nombre: ‘Juan’ y edad: 30, se imprime el mensaje: Nombre: Juan, Edad: 30.
+
+
+void mostrarDatos({required String nombre, required int edad}) {
+  print('Nombre: $nombre, Edad: $edad');
+}
+
+mostrarDatos(nombre: 'Juan', edad: 30);
+
+
+Funciones Asíncronas con async y await
+   async y await
+Las funciones asíncronas permiten manejar operaciones que pueden tardar en completarse, como llamadas a APIs o lecturas de archivos, sin bloquear la ejecución del programa. Se utilizan las palabras clave async y await para definir y manejar funciones asíncronas.
+
+
+ Ejemplo de función asíncrona
+La función obtenerDatos es asíncrona y simula un retraso de 2 segundos antes de devolver la cadena ‘Datos obtenidos’. En la función main, se utiliza await para esperar el resultado de obtenerDatos, y luego se imprime el mensaje: Datos obtenidos.
+
+
+Future<String> obtenerDatos() async {
+// Simulando un retraso
+await Future.delayed(Duration(seconds: 2));
+  return 'Datos obtenidos';
+}
+
+void main() async {
+  String datos = await obtenerDatos();
+  print(datos); // Resultado: Datos obtenidos
+}

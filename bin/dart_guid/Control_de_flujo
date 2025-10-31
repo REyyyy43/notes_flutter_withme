@@ -132,5 +132,39 @@ Nota
 
 
 
+Ejemplo 1: Verificar mayoría de edad
+
+int edad = 18;
+String permiso = (edad >= 18) ? 'Mayor de edad' : 'Menor de edad';
+print(permiso); 
+// Resultado: Mayor de edad
+
+
+
+Ejemplo 2: Asignación rápida
+
+Es útil cuando necesitas asignar un valor a una variable dependiendo de una condición de forma rápida.
+
+bool esActivo = true;
+String estado = esActivo ? 'Activo' : 'Inactivo';
+print(estado); 
+// Resultado: Activo
+
+
+
+Ejemplo 3: Retorno de funciones
+
+El operador ternario puede usarse también para retornar valores en funciones, simplificando bloques if-else cortos.
+
+String obtenerDescuento(int edad) {
+return (edad > 60) ? '10% de descuento' : 'Sin descuento';
+}
+
+print(obtenerDescuento(65)); 
+// Resultado: 10% de descuento
+
+
+
+
 
 

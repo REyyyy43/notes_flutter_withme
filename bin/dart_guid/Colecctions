@@ -1,0 +1,104 @@
+ Dart
+Dart ofrece diversas colecciones para almacenar y gestionar datos de manera eficiente. A continuación, exploraremos las listas, mapas y sets, junto con sus métodos y operaciones comunes.
+
+ Listas (List)
+Las listas son colecciones ordenadas de elementos. Se pueden modificar (listas dinámicas) o ser de tamaño fijo.
+
+dart
+Copiar texto
+List<String> frutas = ['Manzana', 'Naranja', 'Plátano'];
+frutas.add('Fresa'); 
+// Agrega un elemento
+ Mapas (Map)
+Los mapas son colecciones de pares clave-valor. Permiten acceder a los valores utilizando sus claves únicas.
+
+dart
+Copiar texto
+Map<String, int> edades = {'Juan': 25, 'Ana': 30};
+print(edades['Juan']); 
+// Resultado: 25
+ Sets
+Los sets son colecciones desordenadas de elementos únicos. No permiten duplicados.
+
+dart
+Copiar texto
+Set<int> numeros = {1, 2, 3, 4, 4}; // El 4 solo se almacena una vez
+print(numeros); 
+// Resultado: {1, 2, 3, 4}
+Métodos y Operaciones Comunes con Listas y Mapas
+ Listas
+Método add(): Agrega un elemento.
+dart
+Copiar texto
+void main() {
+  List<String> frutas = ['Manzana', 'Naranja'];
+  frutas.add('Fresa'); // Agrega 'Fresa' a la lista
+  print(frutas); 
+  // Resultado: [Manzana, Naranja, Fresa]
+}
+Método remove(): Elimina un elemento.
+dart
+Copiar texto
+void main() {
+  List<String> frutas = ['Manzana', 'Naranja', 'Fresa'];
+  frutas.remove('Naranja'); // Elimina 'Naranja' de la lista
+  print(frutas); 
+  // Resultado: [Manzana, Fresa]
+}
+map(): Aplica una función a cada elemento y devuelve una nueva lista.
+dart
+Copiar texto
+void main() {
+  List<int> numeros = [1, 2, 3];
+  List<int> cuadrados = numeros.map((num) => num * num).toList(); 
+  // Devuelve la lista de cuadrados
+  print(cuadrados); 
+  // Resultado: [1, 4, 9]
+}
+Mapas:
+putIfAbsent(): Agrega un par clave-valor si la clave no existe.
+dart
+Copiar texto
+void main() {
+  Map<String, int> edades = {'Juan': 25, 'Ana': 30};
+  edades.putIfAbsent('Pedro', () => 28); // Agrega 'Pedro' solo si no existe
+  print(edades); 
+  // Resultado: {Juan: 25, Ana: 30, Pedro: 28}
+}
+remove(): Elimina un par clave-valor.
+dart
+Copiar texto
+void main() {
+  Map<String, int> edades = {'Juan': 25, 'Ana': 30, 'Pedro': 28};
+  edades.remove('Ana'); // Elimina el par clave-valor de 'Ana'
+  print(edades); 
+  // Resultado: {Juan: 25, Pedro: 28}
+}
+Método forEach(): Itera sobre los pares clave-valor.
+dart
+Copiar texto
+void main() {
+  Map<String, int> edades = {'Juan': 25, 'Ana': 30, 'Pedro': 28};
+  edades.forEach((nombre, edad) {
+      print('$nombre tiene $edad años');
+  });
+  // Resultado:
+  // Juan tiene 25 años
+  // Ana tiene 30 años
+  // Pedro tiene 28 años
+}
+Spread Operator y Null-Aware Operator
+El spread operator (...) permite expandir elementos de una colección dentro de otra.
+
+dart
+Copiar texto
+var lista1 = [1, 2, 3];
+var lista2 = [0, ...lista1, 4]; 
+// Resultado: [0, 1, 2, 3, 4]
+El null-aware operator (??) proporciona un valor alternativo en caso de que una expresión sea null.
+
+dart
+Copiar texto
+String? nombre;
+String saludo = 'Hola, ${nombre ?? 'invitado'}!'; 
+// Resultado: Hola, invitado!
