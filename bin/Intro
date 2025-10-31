@@ -1,0 +1,17 @@
+Cada Cosa aprendida sobre flutter se incluye en esta guia, 
+
+el contenido importante se encuentra en la carpeta lib/raiz donde nos ensensa todo referente a flutter
+
+dart_guide todo lo referente a dart
+
+bloc nos ensena como es una herramienta de gestion de estado
+
+como funciona una arquitectura limpia en las aplicaciones
+
+example_folder es la nomenclatura de carpetas para obtener un orden mas preciso
+
+luego de leer la guia en flutter se debe contin uar en lib/lib/flutter donde aparecera codigo explicativo de cada cosa y 
+
+hasta lo mas minimo en flutter  para ya empezar de una vez a hacer apps simples y avanzadas
+
+la guia seguira creciendo a medida que avance mi experiencia en flutter.

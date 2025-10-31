@@ -1,0 +1,82 @@
+Estructura de un proyecto Flutter:
+
+// void main() { donde inicia la aplicacion
+// pubspec.yaml: archivo de configuracion del proyecto
+// android/: carpeta donde van los archivos para aplicaciones Android
+// ios/: carpeta donde van los archivos para aplicaciones iOS
+// macos/: carpeta donde van los archivos para aplicaciones macOS
+// windows/: carpeta donde van los archivos para aplicaciones Windows
+// linux/: carpeta donde van los archivos para aplicaciones Linux
+// layouts/: carpeta donde van los archivos de diseño de la aplicacion
+// lib/: carpeta donde van los archivos de codigo fuente
+// test/: carpeta donde van los archivos de pruebas unitarias
+// web/: carpeta donde van los archivos para aplicaciones web
+// build/: carpeta generada automaticamente para archivos compilados
+// .dart_tool/: carpeta generada automaticamente para herramientas de desarrollo
+// .git/: carpeta generada automaticamente para el control de versiones con Git
+// README.md: archivo de documentacion del proyecto
+// LICENSE: archivo de licencia del proyecto
+// .gitignore: archivo que especifica archivos y carpetas a ignorar por Git
+// analysis_options.yaml: archivo de configuracion para el analizador de codigo Dart
+// pubspec.lock: archivo generado automaticamente que bloquea las versiones de las dependencias
+// .metadata: archivo generado automaticamente que contiene metadatos del proyecto
+// .idea/: carpeta generada automaticamente por el IDE IntelliJ IDEA o Android Studio
+// .vscode/: carpeta generada automaticamente por el editor Visual Studio Code
+// .packages: archivo generado automaticamente que mapea los paquetes a sus ubicaciones
+// widgets/: carpeta personalizada para componentes reutilizables de la interfaz de usuario
+// assets/: carpeta personalizada para recursos como imagenes, fuentes, etc.
+// config/: carpeta personalizada para archivos de configuracion del proyecto
+// scripts/: carpeta personalizada para scripts auxiliares del proyecto
+// docs/: carpeta personalizada para documentacion adicional del proyecto
+// examples/: carpeta personalizada para ejemplos de uso del proyecto
+// tools/: carpeta personalizada para herramientas de desarrollo adicionales
+// ci/: carpeta personalizada para configuraciones de integracion continua
+// localization/: carpeta personalizada para archivos de localizacion e internacionalizacion
+// themes/: carpeta personalizada para temas y estilos de la aplicacion
+// models/: carpeta personalizada para modelos de datos de la aplicacion
+// services/: carpeta personalizada para servicios y logica de negocio de la aplicacion
+// controllers/: carpeta personalizada para controladores de la aplicacion
+// repositories/: carpeta personalizada para repositorios de datos de la aplicacion
+// middlewares/: carpeta personalizada para middlewares de la aplicacion
+// providers/: carpeta personalizada para proveedores de estado de la aplicacion
+// hooks/: carpeta personalizada para hooks personalizados de la aplicacion
+// extensions/: carpeta personalizada para extensiones de clases y funciones
+// mixins/: carpeta personalizada para mixins reutilizables en la aplicacion
+// utils/: carpeta personalizada para utilidades y funciones auxiliares de la aplicacion
+// constants/: carpeta personalizada para constantes globales de la aplicacion
+// enums/: carpeta personalizada para enumeraciones utilizadas en la aplicacion
+// typedefs/: carpeta personalizada para definiciones de tipos personalizados
+// interfaces/: carpeta personalizada para interfaces utilizadas en la aplicacion
+// abstract/: carpeta personalizada para clases abstractas de la aplicacion
+// implementations/: carpeta personalizada para implementaciones concretas de clases e interfaces
+// adapters/: carpeta personalizada para adaptadores de datos y servicios
+// decorators/: carpeta personalizada para decoradores de clases y funciones
+// factories/: carpeta personalizada para patrones de fabrica en la aplicacion
+// strategies/: carpeta personalizada para patrones de estrategia en la aplicacion
+// observers/: carpeta personalizada para patrones de observador en la aplicacion
+// commands/: carpeta personalizada para patrones de comando en la aplicacion
+// visitors/: carpeta personalizada para patrones de visitante en la aplicacion
+// mediators/: carpeta personalizada para patrones de mediador en la aplicacion
+// proxies/: carpeta personalizada para patrones de proxy en la aplicacion
+// bridges/: carpeta personalizada para patrones de puente en la aplicacion
+// composites/: carpeta personalizada para patrones de composicion en la aplicacion
+// flyweights/: carpeta personalizada para patrones de flyweight en la aplicacion
+// states/: carpeta personalizada para patrones de estado en la aplicacion
+// chains_of_responsibility/: carpeta personalizada para patrones de cadena de responsabilidad en la aplicacion
+// templates/: carpeta personalizada para plantillas reutilizables en la aplicacion
+// snippets/: carpeta personalizada para fragmentos de codigo reutilizables en la aplicacion
+// experiments/: carpeta personalizada para experimentos y prototipos en la aplicacion
+// drafts/: carpeta personalizada para borradores y versiones preliminares de la aplicacion
+// archives/: carpeta personalizada para archivos y versiones antiguas de la aplicacion
+// backups/: carpeta personalizada para copias de seguridad del proyecto
+// logs/: carpeta personalizada para archivos de registro y depuracion de la aplicacion
+// temp/: carpeta personalizada para archivos temporales generados por la aplicacion
+// cache/: carpeta personalizada para archivos en caché generados por la aplicacion
+// downloads/: carpeta personalizada para archivos descargados por la aplicacion
+// uploads/: carpeta personalizada para archivos subidos por la aplicacion
+// reports/: carpeta personalizada para informes generados por la aplicacion
+// analytics/: carpeta personalizada para datos de analitica de la aplicacion
+// metrics/: carpeta personalizada para metricas de rendimiento de la aplicacion
+// tests/: carpeta personalizada para pruebas adicionales de la aplicacion
+// experiments/: carpeta personalizada para experimentos y pruebas de concepto en la aplicacion
+// examples_folder/: carpeta personalizada para ejemplos de uso del proyecto

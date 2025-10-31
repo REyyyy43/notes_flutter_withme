@@ -1,0 +1,264 @@
+Dart es un lenguaje con tipado estático, lo que significa que cada variable tiene un tipo definido.
+
+A continuación, te presentamos los tipos de datos más comunes en Dart: 
+
+int, double, String, bool, List, Map, Set, Null, dynamic, Object, Function. 
+
+Estos tipos son fundamentales para manejar distintos valores y estructuras en Dart.
+
+
+
+-int:
+Números enteros que representan valores sin decimales. Ideal para contar objetos o iteraciones.
+
+-double:
+Números que incluyen decimales, se utilizan para valores precisos como precios o medidas.
+
+-String:
+Secuencias de caracteres que representan texto. Se utilizan para almacenar palabras, frases o cualquier información alfanumérica.
+
+bool
+Valores booleanos que solo pueden ser true (verdadero) o false (falso). Se utilizan para verificar condiciones o estados.
+
+List
+Colección ordenada de elementos, también conocido como array. 
+Los elementos pueden ser de cualquier tipo, y pueden estar vacíos o contener varios valores.
+
+Map
+Estructura de datos que almacena pares clave-valor. 
+Útil para representar relaciones entre elementos, como diccionarios o tablas de búsqueda.
+
+Set
+Colección de elementos únicos sin un orden específico.
+
+Runes
+Representa caracteres Unicode, útil para manejar símbolos fuera del conjunto básico de caracteres.
+
+Symbol
+Representa identificadores en tiempo de ejecución. Útil para reflejar nombres de variables o métodos.
+
+Null
+Representa la ausencia de un valor. Se usa cuando una variable no tiene un valor asignado.
+
+dynamic
+Puede contener cualquier tipo de valor y cambiar en tiempo de ejecución.
+
+Object
+El tipo base para todas las clases en Dart. Cualquier valor se puede asignar a una variable de tipo Object.
+
+Function
+Representa una función o método. Se puede asignar una función a una variable o pasarla como parámetro.
+
+
+
+Tipos de Variables en Dart
+
+1.Variables locales
+
+--------------------------------------------------------------------------
+   Dart
+ Son las variables declaradas dentro de funciones o bloques de código.
+ Solo existen en ese bloque específico y no pueden ser usadas fuera de él.
+ --------------------------------------------------------------------------
+
+
++++++++++++++++++++++++++++
+void ejemplo() {
+  int numero = 10; // Variable local
+  print(numero);
+}
+++++++++++++++++++++++++++
+
+
+ 2.Variables globales
+
+--------------------------------------------------------------------
+   Dart
+ Son variables que se declaran fuera de cualquier función o clase.
+ Pueden ser accedidas desde cualquier parte del código.
+---------------------------------------------------------------------
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+int contadorGlobal = 0; // Variable global
+
+void incrementar() {
+  contadorGlobal++;
+}
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ 3.Constantes y variables finales
+
+ const
+Una constante cuyo valor debe ser conocido en tiempo de compilación. 
+Su valor no puede cambiar una vez definido, ideal para valores que nunca cambiarán.
+
+
++++++++++++++++++++++++
+const pi = 3.1416;
+const gravedad = 9.8;
++++++++++++++++++++++++
+
+ final
+Similar a const, pero se puede inicializar en tiempo de ejecución. 
+Una vez asignado, su valor no puede cambiar, útil para valores calculados que deben mantenerse constantes.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+final ahora = DateTime.now();
+final nombreUsuario = obtenerNombreUsuario();
+++++++++++++++++++++++++++++++++++++++++++++++
+
+ 4.Variables estáticas
+
+Se usan dentro de clases y pertenecen a la clase, no a las instancias. 
+Esto significa que todos los objetos de la clase comparten el mismo valor.
+
+
+++++++++++++++++++++++++++++++++++++++++++
+class Persona {
+static int totalPersonas = 0; // Variable estática
+String nombre;
+
+Persona(this.nombre) {
+  totalPersonas++; // Incrementa el contador cada vez que se crea una persona
+}
+}
+++++++++++++++++++++++++++++++++++++++++++++
+
+   En resumen
+
+Variables: son espacios de memoria para almacenar valores.
+
+Tipos de variables: pueden ser locales, globales, constantes, finales o estáticas.
+
+Tipos de datos: son los tipos de valores que puede almacenar una variable, como int, double, String, bool, List, Map, Set, Null, dynamic, Object, Function, etc.
+
+Operadores Básicos en Dart
+
+Dart ofrece una variedad de operadores que te permiten realizar operaciones matemáticas, 
+
+comparar valores y controlar el flujo lógico de tu aplicación. Estos operadores son fundamentales para manejar datos y tomar decisiones en el código.
+
+Operadores Aritméticos
+
+Los operadores aritméticos se utilizan para realizar operaciones matemáticas con números.
+
+
+ Suma (+):
+Suma dos valores
+int a = 5 + 3;
+// Resultado: 8
+
+
+ Resta (-):
+Resta un valor de otro
+
+
+int b = 10 - 4;
+// Resultado: 6
+
+
+ Multiplicación (*):
+Multiplica dos valores
+
+dart
+Copiar texto
+int c = 6 * 2;
+// Resultado: 12
+
+
+ División (/):
+Divide un valor por otro. El resultado es un número decimal (double)
+
+dart
+Copiar texto
+double d = 10 / 3; 
+// Resultado: 3.333...
+
+
+ División entera (~/):
+Realiza una división pero devuelve solo la parte entera del resultado.
+
+
+// Resultado: 3
+
+
+ Módulo (%):
+Devuelve el resto de una división
+
+
+int f = 10 % 3; 
+// Resultado: 1
+
+
+Operadores Lógicos
+
+Los operadores lógicos se utilizan para evaluar expresiones booleanas.
+
+ Devuelven true o false según las condiciones.
+
+
+ 1. AND lógico (&&):
+Devuelve true si ambas condiciones son verdaderas.
+
+bool resultado = (5 > 3) && (8 > 5); 
+// Resultado: true
+
+
+ 2. OR lógico (||):
+Devuelve true si al menos una de las condiciones es verdadera.
+
+bool resultado = (5 > 3) || (8 < 5);
+// Resultado: true
+
+
+ 3. NOT lógico (!):
+Niega la condición, cambiando true por false y viceversa.
+
+bool resultado = !(5 > 3); 
+// Resultado: false
+
+
+Operadores Relacionales
+
+Los operadores relacionales comparan dos valores y devuelven un resultado booleano (true o false).
+
+ 1. Igual a (==):
+Verifica si dos valores son iguales.
+
+bool igual = (5 == 5); 
+// Resultado: true
+
+ 2. Diferente de (!=):
+Verifica si dos valores son diferentes.
+
+bool diferente = (5 != 3); 
+// Resultado: true
+
+ 3. Mayor que (>):
+Verifica si el valor de la izquierda es mayor que el de la derecha.
+
+bool mayor = (8 > 5); 
+// Resultado: true
+
+ 4. Menor que (<):
+Verifica si el valor de la izquierda es menor que el de la derecha.
+
+bool menor = (3 < 5); 
+// Resultado: true
+
+
+ 5. Mayor o igual que (>=):
+Verifica si el valor de la izquierda es mayor o igual que el de la derecha.
+
+bool mayorIgual = (5 >= 5); 
+// Resultado: true
+
+
+ 6. Menor o igual que (<=):
+Verifica si el valor de la izquierda es menor o igual que el de la derecha.
+
+bool menorIgual = (3 <= 5); 
+// Resultado: true

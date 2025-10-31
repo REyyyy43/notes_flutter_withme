@@ -1,0 +1,116 @@
+flutter_bloc
+
+Flutter Bloc es una de las herramientas de gestión de estado para aplicaciones Flutter.
+
+ Puedes usarlo para manejar fácilmente todos los estados posibles de tu aplicación.
+
+
+ ¿Cómo funciona?
+Cuando uses Flutter Bloc, crearás eventos para activar las interacciones con la aplicación y luego el bloc encargado emitirá los datos solicitados con un estado; en un ejemplo real sería así:
+
+1- El usuario hace clic en un botón para obtener una lista de juegos.
+
+2- El evento se activa y se informa al bloque que el usuario quiere una lista de juegos.
+
+3- El bloque va a solicitar estos datos (de un repositorio, por ejemplo, que se encarga de conectarse a la API para obtener los datos).
+
+4- Cuando el bloque tenga los datos , determinará si los datos son de éxito o de error y luego emitirá un estado.
+
+5- La vista estará atenta a todos los estados posibles que el bloque pueda emitir para reaccionar ante ellos.
+
+ Por ejemplo, si el bloque emite el estado "Éxito", la vista se reconstruirá con una lista de juegos; 
+
+ pero si el estado es "Error", la vista se reconstruirá con un mensaje de error o cualquier otro mensaje que se desee mostrar.
+
+
+
+-----------------------------------------------------------------------------------------
+
+
+
+¡Perfecto, ahora ya conoces el concepto principal de cómo funciona Flutter Bloc! Ahora, es momento de aprender cómo puedes usarlo.
+
+Imagina que quieres crear una lógica de bloques relacionada con juegos; necesitarás estas tres clases:
+
+juegos_bloque.dardos
+estado_juegos.dardos
+juegos_evento.dardos
+
+Como puedes ver, necesitarás una clase de bloque, una de estado y una de evento. Dentro de cada clase, gestionarás la información necesaria; 
+no te preocupes, las veremos muy pronto. Pero ahora quiero explicarte los conceptos básicos sobre los widgets de bloque.
+
+
+
+
+-BlocBuilder: BlocBuilder es un widget de Flutter que requiere un constructor blocy una builderfunción. 
+
+BlocBuilderEsta función se encarga de construir el widget en respuesta a nuevos estados. 
+
+BlocBuilderEs muy similar a `build` StreamBuilder, pero tiene una API más sencilla para reducir la cantidad de código repetitivo. 
+
+La builderfunción se llamará potencialmente muchas veces y debe ser una función pura que devuelva un widget en respuesta al estado.
+
+Comprueba BlocListenersi quieres "hacer" algo en respuesta a los cambios de estado, como navegar, mostrar un diálogo, etc.
+
+blocSi se omite el parámetro, BlocBuilderse realizará automáticamente una búsqueda utilizando BlocProviderel valor actual BuildContext.
+
+
+
+-BlocProvider: BlocProvider se encarga de proporcionar un bloque a sus hijos. Esta es la forma de "inicializar" el bloque antes de usarlo.
+
+Si necesita proporcionar más de un bloque, puede utilizar MultiBlocProvider para obtener diferentes proveedores.
+
+RepositoryProvider se utiliza para proporcionar un repositorio a sus hijos. 
+
+Normalmente lo usarás cuando necesites crear una instancia de tu clase de repositorio y luego, 
+
+con BlocProvider, accederás a ese repositorio con la ayuda de context.read<YourRepository>() ;
+
+
+
+
+-BlocSelector: BlocSelector es un widget de Flutter similar a `BlocSelector`, 
+
+BlocBuilderpero que permite a los desarrolladores filtrar las actualizaciones seleccionando un nuevo valor según el estado actual del bloc. 
+
+Se evitan compilaciones innecesarias si el valor seleccionado no cambia. 
+
+El valor seleccionado debe ser inmutable para que `BlocSelector` BlocSelectorpueda determinar con precisión si builderse debe volver a llamar a `BlocSelector`.
+
+blocSi se omite el parámetro, BlocSelectorse realizará automáticamente una búsqueda utilizando BlocProviderel valor actual BuildContext.
+
+
+
+
+-BlocListener: BlocListener es un widget de Flutter que recibe un bloque BlocWidgetListenery un bucle opcional bloc, 
+
+e invoca el evento listeneren respuesta a los cambios de estado del bloque. 
+
+Debe usarse para funcionalidades que deben ejecutarse una vez por cada cambio de estado, como la navegación, 
+
+mostrar un elemento SnackBar, mostrar un botón Dialog, etc.
+
+listenerse llama solo una vez por cada cambio de estado ( SIN incluir el estado inicial), a diferencia builderde en BlocBuildery es una voidfunción.
+
+Si se omite el parámetro bloc, BlocListenerse realizará automáticamente una búsqueda utilizando BlocProviderel valor actual BuildContext.
+
+
+
+
+-BlocConsumidor:  BlocConsumer expone un ` BlocConsumer` buildery listenerun `BlocConsumer` para reaccionar a nuevos estados. 
+
+BlocConsumerEs análogo a un `BlocConsumer` anidado BlocListener, BlocBuilderpero reduce la cantidad de código repetitivo necesario. BlocConsumerSolo debe usarse cuando sea necesario reconstruir la interfaz de usuario y ejecutar otras reacciones a los cambios de estado en el `BlocConsumer` . blocToma BlocConsumerun `BlocConsumer` y un `BlocConsumer` obligatorios , y un `BlocConsumer` BlocWidgetBuilder, un ` BlocConsumer` y BlocWidgetListenerun `BlocConsumer` opcionales .blocBlocBuilderConditionBlocListenerCondition
+
+blocSi se omite el parámetro, BlocConsumerse realizará automáticamente una búsqueda utilizando BlocProviderel valor actual BuildContext.
+
+
+
+
+-Proveedor de repositorio:  `RepositoryProvider` es un widget de Flutter que proporciona un repositorio a sus widgets hijos mediante 
+
+` RepositoryProvider` RepositoryProvider.of<T>(context). 
+
+Se utiliza como widget de inyección de dependencias (DI) para que una única instancia de un repositorio pueda proporcionarse a múltiples widgets dentro de un subárbol. 
+
+` BlocProviderRepositoryProvider` debe usarse para proporcionar bloques, mientras que `RepositoryProvider` RepositoryProvidersolo debe usarse para repositorios.
+

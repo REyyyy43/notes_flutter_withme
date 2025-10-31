@@ -1,0 +1,21 @@
+-Conclusión-
+
+La arquitectura de código limpio y el patrón BLoC son herramientas potentes que ayudan a estructurar las aplicaciones Flutter, 
+
+garantizando su escalabilidad, mantenibilidad y capacidad de prueba. 
+
+Al implementar los principios aquí descritos, 
+
+tanto principiantes como desarrolladores experimentados pueden crear aplicaciones bien estructuradas y de alta calidad.
+
+La verdadera belleza de este enfoque reside en su flexibilidad y modularidad . 
+
+La interfaz de usuario está desacoplada de la lógica de negocio, y la lógica de negocio está desacoplada de las fuentes de datos, 
+
+lo que facilita enormemente la extensión o refactorización de partes de la aplicación a medida que crece.
+
+Puedes adaptar y ampliar los conceptos presentados en este artículo. 
+
+Tanto si desarrollas una pequeña aplicación como una gran aplicación empresarial, 
+
+adoptar la Arquitectura Limpia y BLoC te encaminará hacia la escritura de código mantenible y escalable .

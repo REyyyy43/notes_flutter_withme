@@ -1,0 +1,97 @@
+Estructura de un codigo Flutter: 
+
+import 'package:flutter/material.dart'; //importa el paquete de Flutter para poder crear aplicaciones móviles
+
+ void main() {
+  runApp(MyApp());
+ }  //donde inicia la aplicacion
+
+ //con un stl se genera automaticamente un StatelessWidget o StatefulWidget
+
+ class MyApp extends StatelessWidget { //clase principal de la aplicacion
+  const MyApp({Key? key}) : super(key: key); //constructor de la clase MyApp
+
+  @override //sobrescribe el metodo build de la clase StatelessWidget 
+  //metodo build es obligatorio en todas las clases que extienden StatelessWidget o StatefulWidget
+ // retorna un widget que representa la interfaz de usuario
+ // en este caso retorna un MaterialApp que es el widget principal de la aplicacion
+ // MaterialApp es un widget que contiene la configuracion de la aplicacion como el tema, las rutas, etc.
+ // StatelessWidget es una clase que representa un widget inmutable, es decir, que no cambia su estado
+ // StatefulWidget es una clase que representa un widget mutable, es decir, que puede cambiar su estado
+
+
+  Widget build(BuildContext context) { 
+    //metodo que construye la interfaz de usuario
+    // BuildContext es un objeto que contiene informacion sobre el arbol de widgets
+    // y permite acceder a los widgets padres y a los recursos de la aplicacion
+    // Widget es una clase que representa un elemento de la interfaz de usuario
+    // en Flutter todo es un widget, desde un boton hasta una pantalla completa
+
+   return MaterialApp( //widget principal de la aplicacion
+    title: 'Flutter Demo', //titulo de la aplicacion
+    theme: ThemeData( //tema de la aplicacion //ThemeData es una clase que contiene la configuracion del tema de la aplicacion
+     primarySwatch: Colors.blue, //color primario de la aplicacion
+    ),
+    home: MyHomePage(title: 'Flutter Demo Home Page'), //pagina principal de la aplicacion
+   );
+  } 
+  } //aqui comienza el desarrollo de la aplicacion
+
+ //Scaffold: es un widget que proporciona una estructura basica para la aplicacion
+ //AppBar: es un widget que representa la barra de navegacion superior
+ //Center: es un widget que centra su hijo dentro de si mismo
+ //Text: es un widget que muestra un texto en la pantalla
+ //StatefulWidget: es una clase que representa un widget que puede cambiar su estado
+ //State: es una clase que representa el estado de un StatefulWidget
+ //setState: es un metodo que notifica al framework que el estado del widget ha cambiado y debe ser reconstruido
+ //hot reload: es una caracteristica de Flutter que permite actualizar la aplicacion en tiempo real sin perder el estado actual
+
+  //clase: es una plantilla para crear objetos
+  //objeto: es una instancia de una clase
+  //atributo: es una variable que pertenece a una clase
+  //metodo: es una funcion que pertenece a una clase
+  //instanciar: es crear un objeto a partir de una clase
+class MyHomePage extends StatefulWidget { //clase que representa la pagina principal de la aplicacion
+  MyHomePage({Key? key, required this.title}) : super(key: key); //constructor de la clase MyHomePage
+  final String title; //atributo que contiene el titulo de la pagina
+  @override
+  _MyHomePageState createState() => _MyHomePageState(); //metodo que crea el estado de la pagina 
+  //State es el estado de un widget StatefulWidget
+  //createState es un metodo que crea el estado del widget
+  // _MyHomePageState es una clase que representa el estado de la pagina MyHomePage "_" indica que la clase es privada
+  //private: es una clase, metodo o atributo que solo puede ser accedido desde la misma clase
+  //public: es una clase, metodo o atributo que puede ser accedido desde cualquier clase
+  //protected: es una clase, metodo o atributo que solo puede ser accedido desde la misma clase o clases hijas
+  //required: es un modificador que indica que un parametro es obligatorio
+}
+
+//Lista de Widgets
+
+//ListView: Es un widget que muestra una lista de widgets secundarios de forma desplazable y lineal. //Es muy útil para presentar una gran cantidad de datos que no caben en la pantalla.
+//
+//
+//
+
+    ---------------------------------------------
+
+//estilos de column y row
+
+// crossAxisAlignment: propiedad que define la alineacion de los hijos en el eje cruzado (horizontal)
+// crossAxisAlignment: CrossAxisAlignment.center, //centra los hijos horizontalmente
+// mainAxisAlignment: propiedad que define la alineacion de los hijos en el eje principal (vertical)
+// mainAxisAlignment: MainAxisAlignment.center, //centra los hijos verticalmente
+// mainAxisAlignment: MainAxisAlignment.spaceBetween, //espacia los hijos uniformemente con espacio entre ellos
+// mainAxisAlignment: MainAxisAlignment.spaceAround, //espacia los hijos uniformemente con espacio alrededor de ellos
+// mainAxisAlignment: MainAxisAlignment.spaceEvenly, //espacia los hijos uniformemente con el mismo espacio entre ellos y los bordes
+// crossAxisAlignment: CrossAxisAlignment.start, //alinea los hijos al inicio horizontalmente
+// crossAxisAlignment: CrossAxisAlignment.end, //alinea los hijos al final horizontalmente
+// mainAxisSize: propiedad que define el tamaño del eje principal
+// mainAxisSize: MainAxisSize.min, //el tamaño del eje principal es el mínimo necesario para contener a los hijos
+// mainAxisSize: MainAxisSize.max, //el tamaño del eje principal es el máximo disponible
+// Expanded: widget que expande un hijo de un Row, Column o Flex para llenar el espacio disponible
+//Ctrl + . para importar automaticamente las librerias necesarias y para otras acciones rapidas como crear metodos, clases, etc.
+
+  pubspec.yaml: archivo de configuracion del proyecto
+  lib/: carpeta donde van los archivos de codigo fuente
+  test/: carpeta donde van los archivos de pruebas unitarias
+

@@ -1,0 +1,136 @@
+Control de flujo en Dart
+
+El control de flujo te permite ejecutar bloques de código basados en ciertas condiciones,
+lo que es esencial para tomar decisiones lógicas en tu aplicación.
+
+
+Condicionales: if, else, else if en Dart
+
+
+ if
+Ejecuta un bloque de código si la condición es verdadera.
+
+int edad = 18;
+if (edad >= 18) {
+  print('Eres mayor de edad');
+}
+
+else
+Ejecuta un bloque de código alternativo si la condición es falsa.
+
+int edad = 16;
+if (edad >= 18) {
+  print('Eres mayor de edad');
+} else {
+  print('Eres menor de edad');
+}
+
+else if
+Agrega múltiples condiciones que se verifican en secuencia.
+
+int edad = 17;
+if (edad >= 18) {
+  print('Eres mayor de edad');
+} else if (edad >= 16) {
+  print('Puedes conducir');
+} else {
+  print('Eres menor de edad');
+}
+
+Condicional switch
+El switch evalúa una expresión y ejecuta el caso que coincida con su valor.
+
+String dia = 'Lunes';
+switch (dia) {
+  case 'Lunes':
+    print('Inicio de la semana');
+    break;
+  case 'Viernes':
+    print('Fin de la semana');
+    break;
+  default:
+    print('Día regular');
+}
+
+
+
+Los Bucles en Dart 
+
+Los bucles permiten ejecutar un bloque de código varias veces de forma repetitiva, lo que es esencial para realizar tareas iterativas.
+
+
+ Bucle for en Dart
+El bucle for se utiliza cuando conoces de antemano cuántas veces deseas repetir un bloque de código.
+
+for (int i = 0; i < 5; i++) {
+print('Número: $i');
+}
+
+Bucle while en Dart
+El bucle while ejecuta el bloque de código mientras la condición sea verdadera.
+
+int contador = 0;
+while (contador < 5) {
+  print('Contador: $contador');
+  contador++;
+}
+
+Bucle do-while en Dart
+El bucle do-while ejecuta el código al menos una vez y luego verifica la condición.
+
+int contador = 0;
+do {
+  print('Contador: $contador');
+  contador++;
+} while (contador < 5);
+
+Bucle break y continue en Dart
+Los bucles y los controles como break y continue son fundamentales para manejar la repetición de código y controlar el flujo de iteración en Dart.
+
+ Bucle break
+Detiene la ejecución del bucle de forma abrupta.
+
+for (int i = 0; i < 5; i++) {
+  if (i == 3) {
+    break;
+  }
+  print('Número: $i');
+}
+// Se detiene en el 3
+
+Bucle continue
+Salta a la siguiente iteración sin terminar la actual.
+
+for (int i = 0; i < 5; i++) {
+if (i == 3) {
+  continue;
+}
+print('Número: $i');
+}
+// Se salta el 3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Uso del Operador Ternario en Dart
+
+El operador ternario es una forma concisa de escribir expresiones condicionales en una sola línea, 
+ideal para simplificar código en situaciones donde se utilizan condiciones sencillas. 
+Funciona como una alternativa eficiente al clásico bloque if-else, manteniendo el código más limpio y fácil de leer.
+
+Sintaxis del Operador Ternario
+El operador ternario sigue esta estructura:
+
+-------------------------------------------------
+condición ? valor_si_verdadero : valor_si_falso;
+-------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Nota
+ Si la condición es verdadera, se ejecuta el valor_si_verdadero.
+ Si la condición es falsa, se ejecuta el valor_si_falso.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
