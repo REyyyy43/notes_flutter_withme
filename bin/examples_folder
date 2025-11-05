@@ -80,3 +80,4 @@ Estructura de un proyecto Flutter:
 // tests/: carpeta personalizada para pruebas adicionales de la aplicacion
 // experiments/: carpeta personalizada para experimentos y pruebas de concepto en la aplicacion
 // examples_folder/: carpeta personalizada para ejemplos de uso del proyecto
+// screens:

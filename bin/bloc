@@ -1,8 +1,17 @@
+
+
+
+
+
+
+
+
 flutter_bloc
 
 Flutter Bloc es una de las herramientas de gestión de estado para aplicaciones Flutter.
 
  Puedes usarlo para manejar fácilmente todos los estados posibles de tu aplicación.
+ 
 
 
  ¿Cómo funciona?
